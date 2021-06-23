@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://admin-shashank:admin123@cluster0.8sqig.mongodb.net/friendsConnectDB",
+  "jwtSecret": "secretToken",
+  "githubClientId": "9e9007e68d34196f2e29",
+  "githubClientSecret": "5c2ecc0b132746226ecdaeb7dbc5a6d032d27286"
+}
