@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { connect } from "react-redux"
 import PropTypes from "prop-types"
 import { logout } from "../../actions/auth"
+import favicon from "./favicon.png"
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
@@ -43,7 +44,12 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <nav className="navbar bg-dark">
       <h1>
         <Link to="/">
-          <i className="fas fa-users"></i> Friends Book
+          <img
+            src={favicon}
+            style={{ height: "25px", width: "25px" }}
+            alt="logo"
+          />{" "}
+          Friends Book
         </Link>
       </h1>
       {!loading && (

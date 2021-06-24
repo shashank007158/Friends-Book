@@ -8,7 +8,7 @@ const ProfileTop = ({
     location,
     website,
     social,
-    user: { name, avatar },
+    user: { _id, name, avatar },
   },
 }) => {
   return (

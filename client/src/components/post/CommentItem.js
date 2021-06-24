@@ -55,10 +55,13 @@ const CommentItem = ({
               <i className="fas fa-times"></i>
             </button>
           )}
-          {like.length > 0 && (
-            <span>
-              <p className="text-dark">You liked this comment</p>
-            </span>
+          {like.map(
+            (like) =>
+              like.user === auth.user._id && (
+                <span>
+                  <p className="text-dark">You liked this comment</p>
+                </span>
+              )
           )}
         </div>
       </div>

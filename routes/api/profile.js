@@ -45,6 +45,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() })
     }
     const {
+      profileImage,
       company,
       website,
       location,
@@ -62,6 +63,7 @@ router.post(
     //Build profile object
     const profileFields = {}
     profileFields.user = req.user.id
+    if (profileImage) profileFields.profileImage = profileImage
     if (company) profileFields.company = company
     if (website) profileFields.website = website
     if (location) profileFields.location = location

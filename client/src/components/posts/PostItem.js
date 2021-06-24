@@ -59,10 +59,13 @@ const PostItem = ({
                 <i class="fas fa-times"></i>
               </button>
             )}
-            {like.length > 0 && (
-              <span>
-                <p className="text-dark">You liked this post</p>
-              </span>
+            {like.map(
+              (like) =>
+                like.user === auth.user._id && (
+                  <span>
+                    <p className="text-dark">You liked this post</p>
+                  </span>
+                )
             )}
           </Fragment>
         )}
